@@ -36,51 +36,389 @@
   </head>
 
   <body>
-    <div class="popup popup--online-booking">
+    <div class="popup popup--order">
   <div class="popup__container">
     <button class="popup__close" type="button" aria-label="Закрыть">
-      <svg width="15" height="15">
+      <svg width="20" height="20">
         <use xlink:href="img/sprite.svg#close"></use>
       </svg>
     </button>
     <div class="popup__wrapper">
-      <h2 class="popup__title">Онлайн запись</h2>
-      <div class="popup__text">
-        <p>Оставьте ваши данные и мы вам перезвоним.</p>
-      </div>
-
+      <span class="popup__title">Забронировать место</span>
       <form class="form-submit">
         <div class="form-submit__group">
-          <label class="form-submit__label" for="online-name">Имя</label>
+          <label class="form-submit__label">ФИО</label>
 
           <input
             class="form-submit__input"
-            name="name"
-            id="online-name"
             type="text"
-            placeholder="Введите ваше имя"
+            placeholder="ФИО"
             required
           />
         </div>
         <div class="form-submit__group">
-          <label class="form-submit__label" for="online-tel">
-            Контактный телефон
-          </label>
+          <label class="form-submit__label">Телефон </label>
 
           <input
             class="form-submit__input"
-            name="tel"
-            id="online-tel"
             type="tel"
             placeholder="+7 (___) ___-__-__"
             required
           />
         </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">E-mail </label>
 
-        <button class="form-submit__btn btn" type="button">
-          Заказать звонок
-        </button>
+          <input
+            class="form-submit__input"
+            type="email"
+            placeholder="Адрес вашей электронной почты"
+            required
+          />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">Дополнительная информация </label>
+
+          <textarea
+            class="form-submit__input form-submit__input--textarea"
+            placeholder="Здесь вы можете оставить дополнительную
+          информацию"
+          ></textarea>
+        </div>
+
+        <button class="form-submit__btn btn" type="button">Отправить</button>
+
+        <div class="form-submit__bottom">
+          Нажимая кнопку “Отправить” вы соглашаетесь <br />
+          с
+          <a href="#">полиитикой конфиденциальности</a>
+        </div>
       </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--promo-code">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="20" height="20">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <span class="popup__title">Ваш промокод на тур в Дивеево</span>
+      <p class="popup__text">
+        Назовите его при заказе тура и получите скидку 10%.
+      </p>
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <input
+            class="form-submit__input"
+            type="text"
+            required
+            value="ПОДАРОКДИВЕЕВО"
+          />
+          <button class="form-submit__btn btn" type="button">Заказать</button>
+        </div>
+
+        <div class="form-submit__bottom">
+          Важно! промокод может быть использован только один раз
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--product">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="20" height="20">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="product">
+        <h2 class="product__title">ДИВЕЕВО — МУРОМ</h2>
+
+        <div class="product__wrapper">
+          <div class="product__slider">
+            <div class="slider-thumbs">
+              <div class="slider-thumbs__main swiper" id="slider-main">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <picture>
+                      <source srcset="img/product/1.webp" type="image/webp" />
+                      <img src="img/product/1.jpg" alt="img" />
+                    </picture>
+                  </li>
+                  <li class="swiper-slide">
+                    <picture>
+                      <source srcset="img/product/1.webp" type="image/webp" />
+                      <img src="img/product/1.jpg" alt="img" />
+                    </picture>
+                  </li>
+                  <li class="swiper-slide">
+                    <picture>
+                      <source srcset="img/product/1.webp" type="image/webp" />
+                      <img src="img/product/1.jpg" alt="img" />
+                    </picture>
+                  </li>
+                  <li class="swiper-slide">
+                    <picture>
+                      <source srcset="img/product/1.webp" type="image/webp" />
+                      <img src="img/product/1.jpg" alt="img" />
+                    </picture>
+                  </li>
+                  <li class="swiper-slide">
+                    <picture>
+                      <source srcset="img/product/1.webp" type="image/webp" />
+                      <img src="img/product/1.jpg" alt="img" />
+                    </picture>
+                  </li>
+                  <li class="swiper-slide">
+                    <picture>
+                      <source srcset="img/product/1.webp" type="image/webp" />
+                      <img src="img/product/1.jpg" alt="img" />
+                    </picture>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="slider-thumbs__nav">
+                <div class="slider-thumbs__nav-wrap swiper" id="slider-nav">
+                  <ul class="swiper-wrapper">
+                    <li class="swiper-slide slider-nav__slide">
+                      <picture>
+                        <source srcset="img/product/1.webp" type="image/webp" />
+                        <img src="img/product/1.jpg" alt="img" />
+                      </picture>
+                    </li>
+                    <li class="swiper-slide slider-nav__slide">
+                      <picture>
+                        <source srcset="img/product/1.webp" type="image/webp" />
+                        <img src="img/product/1.jpg" alt="img" />
+                      </picture>
+                    </li>
+                    <li class="swiper-slide slider-nav__slide">
+                      <picture>
+                        <source srcset="img/product/1.webp" type="image/webp" />
+                        <img src="img/product/1.jpg" alt="img" />
+                      </picture>
+                    </li>
+                    <li class="swiper-slide slider-nav__slide">
+                      <picture>
+                        <source srcset="img/product/1.webp" type="image/webp" />
+                        <img src="img/product/1.jpg" alt="img" />
+                      </picture>
+                    </li>
+                    <li class="swiper-slide slider-nav__slide">
+                      <picture>
+                        <source srcset="img/product/1.webp" type="image/webp" />
+                        <img src="img/product/1.jpg" alt="img" />
+                      </picture>
+                    </li>
+                    <li class="swiper-slide slider-nav__slide">
+                      <picture>
+                        <source srcset="img/product/1.webp" type="image/webp" />
+                        <img src="img/product/1.jpg" alt="img" />
+                      </picture>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product__info">
+            <div class="product__item">
+              <p>
+                <b>Маршрут:</b>
+              </p>
+              <p>Москва → Дивеево → Святые источники → Муром</p>
+            </div>
+            <div class="product__item">
+              <p>
+                <b>Включено:</b>
+              </p>
+              <p>
+                <b>Транспорт:</b> Комфортабельный автобус с кондиционером, ТВ.
+                питание: Обед, ужин в паломнической трапезной экскурсии: по
+                программе
+              </p>
+            </div>
+            <div class="product__item">
+              <p>
+                <b>Сопровождение:</b> Группу сопровождает профессиональный
+                православный экскурсовод
+              </p>
+            </div>
+
+            <ul class="product__list">
+              <li>Экскурсии в Дивеево и в Муроме</li>
+              <li>Экскурсии по программе</li>
+              <li>Проживание в комфортабельных гостиницах</li>
+              <li>Проживание двухместное</li>
+            </ul>
+
+            <div class="product__add">
+              <p><b>Дополнительно оплачивается:</b></p>
+
+              <ul>
+                <li>
+                  проживание от 600 руб, для пар возможно проживание в
+                  двухместных номера;
+                </li>
+                <li>по желанию - обед в Муроме 200 руб.</li>
+                <li>по желанию - экскурсия по монастырю 100 р.</li>
+                <li>обед в Муроме 200 руб</li>
+              </ul>
+            </div>
+
+            <span class="product__price">4000 руб.</span>
+
+            <button class="product__btn btn" type="button">
+              Забронировать тур
+            </button>
+
+            <div class="product__links">
+              <a class="product__link" href="#">Распечатать план поездки</a>
+              <a class="product__link" href="#">Отзывы</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--text">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="20" height="20">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="text-card">
+        <div class="text-card__top">
+          <h2 class="text-card__title">
+            Текст акафист преподобному Серафиму Саровскому
+          </h2>
+          <button class="text-card__back btn" type="button">
+            <svg
+              width="18"
+              height="8"
+              viewBox="0 0 18 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.04 3.60128C0.844739 3.79654 0.844739 4.11313 1.04 4.30839L4.22198 7.49037C4.41724 7.68563 4.73383 7.68563 4.92909 7.49037C5.12435 7.29511 5.12435 6.97852 4.92909 6.78326L2.10066 3.95483L4.92909 1.12641C5.12435 0.931145 5.12435 0.614562 4.92909 0.4193C4.73383 0.224038 4.41724 0.224038 4.22198 0.4193L1.04 3.60128ZM17.8936 3.45483H1.39355V4.45483H17.8936V3.45483Z"
+                fill="black"
+              />
+            </svg>
+            Вернуться к расписанию
+          </button>
+        </div>
+
+        <div class="text-card__wrapper">
+          <div class="text-card__left">
+            <picture>
+              <source srcset="img/text-card.webp" type="image/webp" />
+              <img class="text-card__img" src="img/text-card.jpg" alt="img" />
+            </picture>
+
+            <div class="text-card__btns">
+              <button class="text-card__btn" type="button">
+                <img src="img/icons/text-icon.svg" alt="icon" />
+                Текст
+              </button>
+              <button class="text-card__btn" type="button">
+                <img src="img/icons/video-icon.svg" alt="icon" />
+                Видео
+              </button>
+            </div>
+          </div>
+          <div class="text-card__right">
+            <div class="text-card__item">
+              <h3>Конда́к 1.</h3>
+              <p>
+                Избра́нный чудотво́рче и преди́вный уго́дниче Христо́в, ско́рый
+                помо́щниче и моли́твенниче на́ш, преподо́бне о́тче Серафи́ме!
+                Велича́юще просла́вльшаго тя́ Го́спода, воспева́ем ти́ похва́льная. Ты́
+                же, я́ко име́яй ве́лие дерзнове́ние ко Го́споду, от вся́ких на́с бе́д
+                свободи́, зову́щих:
+              </p>
+              <p>Ра́дуйся, преподо́бне Серафи́ме, Саро́вский чудотво́рче.</p>
+            </div>
+            <div class="text-card__item">
+              <h3>И́кос 1.</h3>
+              <p>
+                Ангелов Творе́ц избра́ тя́ изнача́ла, да просла́виши житие́м твои́м
+                пречу́дное и́мя Святы́я Тро́ицы: яви́лся бо еси́ вои́стинну а́нгел на
+                земли́ и во пло́ти серафи́м; я́ко лу́ч пресве́тлый Ве́чнаго Со́лнца
+                Пра́вды, просвети́ся житие́ твое́. Мы́ же, зря́ще прехва́льныя труды́
+                твоя́, с благогове́нием и ра́достию глаго́лем ти́ сицева́я:
+              </p>
+              <p>
+                <b>
+                  Ра́дуйся, пра́вило ве́ры и благоче́стия; ра́дуйся, о́бразе кро́тости
+                  и смире́ния.
+                </b>
+              </p>
+              <p>
+                <b>
+                  ́дуйся, пресла́вное ве́рных велича́ние; ра́дуйся, прети́хое ско́рбным
+                  утеше́ние.
+                </b>
+              </p>
+              <p>
+                <b>
+                  Ра́дуйся, прелюби́мое и́ноков похвале́ние; ра́дуйся, живу́щим в ми́ре
+                  преди́вное поможе́ние.
+                </b>
+              </p>
+              <p>
+                <b>
+                  Ра́дуйся, Росси́йския держа́вы сла́во и огражде́ние; ра́дуйся,
+                  тамбо́вския страны́ свяще́нное украше́ние.
+                </b>
+              </p>
+              <p><b>Ра́дуйся, преподо́бне Серафи́ме, Саро́вский чудотво́рче</b></p>
+            </div>
+            <div class="text-card__item">
+              <h3>Конда́к 2.</h3>
+              <p>
+                Ви́дящи ма́ти твоя́, преподо́бне о́тче Серафи́ме, те́плую любо́вь твою́
+                ко и́ноческому житию́, позна́ святу́ю во́лю Госпо́дню о тебе́, и Бо́гу,
+                я́ко да́р соверше́н принося́щи, благослови́ тя на те́сный пу́ть
+                и́ноческий святы́м кресто́м свои́м, его́же до конца́ жития́ твоего́ на
+                пе́рсех носи́л еси́, зна́менуя ве́лию любо́вь твою́ к распе́ншемуся за
+                ны́ Христу́ Бо́гу на́шему, Ему́же вси́ со умиле́нием зове́м: Аллилу́иа.
+              </p>
+            </div>
+            <div class="text-card__item">
+              <h3>И́кос 2.</h3>
+              <p>
+                Ра́зум небе́сный тебе́ дарова́ся, свя́тче Бо́жий: от ю́ности твоея́ не
+                престая́ помышля́ти о Небе́снем, оста́вил еси́ до́м о́тчий Ца́рствия
+                Бо́жия ра́ди и пра́вды Его́. Сего́ ра́ди приими́ от на́с похвалы́ сия́:
+              </p>
+              <p>
+                <b>
+                  Ра́дуйся, гра́да Ку́рска ча́до богоизбра́нное; ра́дуйся, роди́телей
+                  благочести́вых о́трасле пречестна́я.
+                </b>
+              </p>
+              <p>
+                <b>
+                  Ра́дуйся, доброде́тели ма́тере своея́ унасле́дивый; ра́дуйся,
+                  благоче́стию и моли́тве е́ю науче́нный.
+                </b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -358,7 +696,88 @@
 
 
       <main class="main">
-        <section class="hero"></section>
+        <section class="hero">
+  <div class="hero__slider swiper">
+    <ul class="hero__slides swiper-wrapper">
+      <li
+        class="hero__slide swiper-slide"
+        style="background-image: url('img/hero/1.jpg')"
+      >
+        <div class="container">
+          <div class="hero__offer">
+            <h1 class="hero__title">Туры Дивеево Муром Спецпредложение</h1>
+            <div class="hero__text">
+              <blockquote class="hero__quote">
+                «Божия Матерь ведь избрала это место! 
+                А чего Царица-то Небесная не возможет, 
+                все будет у Ней!»
+              </blockquote>
+              <cite class="hero__name">св. Серафим Саровский</cite>
+            </div>
+            <button class="hero__btn btn" type="button">
+              Забронировать тур
+            </button>
+          </div>
+        </div>
+      </li>
+      <li
+        class="hero__slide swiper-slide"
+        style="background-image: url('img/hero/1.jpg')"
+      >
+        <div class="container">
+          <div class="hero__offer">
+            <h1 class="hero__title">Туры Дивеево Муром Спецпредложение</h1>
+            <div class="hero__text">
+              <blockquote class="hero__quote">
+                «Божия Матерь ведь избрала это место! 
+                А чего Царица-то Небесная не возможет, 
+                все будет у Ней!»
+              </blockquote>
+              <cite class="hero__name">св. Серафим Саровский</cite>
+            </div>
+            <button class="hero__btn btn" type="button">
+              Забронировать тур
+            </button>
+          </div>
+        </div>
+      </li>
+      <li
+        class="hero__slide swiper-slide"
+        style="background-image: url('img/hero/1.jpg')"
+      >
+        <div class="container">
+          <div class="hero__offer">
+            <h1 class="hero__title">Туры Дивеево Муром Спецпредложение</h1>
+            <div class="hero__text">
+              <blockquote class="hero__quote">
+                «Божия Матерь ведь избрала это место! 
+                А чего Царица-то Небесная не возможет, 
+                все будет у Ней!»
+              </blockquote>
+              <cite class="hero__name">св. Серафим Саровский</cite>
+            </div>
+            <button class="hero__btn btn" type="button">
+              Забронировать тур
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="swiper-pagination"></div>
+
+    <button
+      class="swiper-button-next"
+      type="button"
+      aria-label="Следующий"
+    ></button>
+    <button
+      class="swiper-button-prev"
+      type="button"
+      aria-label="Предыдущий"
+    ></button>
+  </div>
+</section>
 
         <section class="about-section">
   <div class="container">
@@ -422,7 +841,10 @@
         <ul class="excursions__slides swiper-wrapper">
           <li class="excursions__slide swiper-slide">
             <div class="excursions-card">
-              <a class="excursions-card__link" href="#"></a>
+              <button
+                class="excursions-card__link product-btn"
+                type="button"
+              ></button>
               <div class="excursions-card__top">
                 <picture>
                   <source srcset="img/excursions/1.webp" type="image/webp" />
@@ -445,7 +867,10 @@
           </li>
           <li class="excursions__slide swiper-slide">
             <div class="excursions-card">
-              <a class="excursions-card__link" href="#"></a>
+              <button
+                class="excursions-card__link product-btn"
+                type="button"
+              ></button>
               <div class="excursions-card__top">
                 <picture>
                   <source srcset="img/excursions/2.webp" type="image/webp" />
@@ -466,7 +891,10 @@
           </li>
           <li class="excursions__slide swiper-slide">
             <div class="excursions-card">
-              <a class="excursions-card__link" href="#"></a>
+              <button
+                class="excursions-card__link product-btn"
+                type="button"
+              ></button>
               <div class="excursions-card__top">
                 <picture>
                   <source srcset="img/excursions/3.webp" type="image/webp" />
@@ -485,7 +913,10 @@
           </li>
           <li class="excursions__slide swiper-slide">
             <div class="excursions-card">
-              <a class="excursions-card__link" href="#"></a>
+              <button
+                class="excursions-card__link product-btn"
+                type="button"
+              ></button>
               <div class="excursions-card__top">
                 <picture>
                   <source srcset="img/excursions/1.webp" type="image/webp" />
@@ -508,7 +939,10 @@
           </li>
           <li class="excursions__slide swiper-slide">
             <div class="excursions-card">
-              <a class="excursions-card__link" href="#"></a>
+              <button
+                class="excursions-card__link product-btn"
+                type="button"
+              ></button>
               <div class="excursions-card__top">
                 <picture>
                   <source srcset="img/excursions/2.webp" type="image/webp" />
@@ -529,7 +963,10 @@
           </li>
           <li class="excursions__slide swiper-slide">
             <div class="excursions-card">
-              <a class="excursions-card__link" href="#"></a>
+              <button
+              class="excursions-card__link product-btn"
+              type="button"
+            ></button>
               <div class="excursions-card__top">
                 <picture>
                   <source srcset="img/excursions/3.webp" type="image/webp" />
@@ -2054,7 +2491,96 @@
 </section>
 
         <section class="contacts" id="contacts">
-  <div class="container"></div>
+  <div class="container">
+    <h2 class="contacts__title section-title">кОНТАКТЫ</h2>
+
+    <div class="contacts__inner">
+      <div class="contacts__schedule">
+        <div><b>Часы работы ПС "Туры Девеево":</b></div>
+        <div>ежедневно с 9:00 до 21:00</div>
+        <div>суббота воскресенье с 9 до 16:00</div>
+      </div>
+      <div class="contacts__links">
+        <div class="contacts__phones">
+          <a class="contacts__phone" href="tel:74994990124">+ 7 499 499 0124</a>
+          <a class="contacts__whatsapp" href="#">
+            <svg
+              width="27"
+              height="26"
+              viewBox="0 0 27 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.93444 17.8513C3.73731 15.8888 3.31857 13.5693 3.75683 11.328C4.19509 9.08682 5.4602 7.07811 7.31467 5.679C9.16913 4.27988 11.4854 3.5866 13.8287 3.72929C16.1719 3.87198 18.381 4.84083 20.0412 6.45396C21.7014 8.06709 22.6985 10.2136 22.8453 12.4904C22.9922 14.7673 22.2787 17.0179 20.8388 18.8198C19.3988 20.6217 17.3315 21.851 15.0249 22.2768C12.7184 22.7027 10.3311 22.2958 8.31139 21.1326V21.1326L4.97464 22.0506C4.83793 22.0894 4.69298 22.0918 4.55499 22.0575C4.41699 22.0232 4.29104 21.9535 4.19032 21.8556C4.0896 21.7577 4.01783 21.6354 3.98253 21.5013C3.94724 21.3672 3.94971 21.2264 3.98969 21.0935L4.93444 17.8513Z"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15.6584 18.5352C14.6004 18.5378 13.5524 18.3372 12.5745 17.945C11.5965 17.5528 10.708 16.9767 9.95993 16.2498C9.21186 15.523 8.61897 14.6596 8.21534 13.7094C7.8117 12.7592 7.60528 11.7409 7.60794 10.7129C7.61059 9.9894 7.90826 9.29641 8.43572 8.78573C8.96318 8.27504 9.67745 7.9883 10.4221 7.9883V7.9883C10.5449 7.98735 10.6658 8.01859 10.7719 8.07874C10.878 8.13889 10.9655 8.22572 11.0251 8.3301L12.201 10.3223C12.2709 10.4434 12.3068 10.5802 12.305 10.7191C12.3033 10.858 12.2639 10.9939 12.1909 11.1133L11.2462 12.6465C11.7301 13.6925 12.5919 14.5298 13.6684 15L15.2463 14.0821C15.3692 14.0111 15.5091 13.9729 15.652 13.9712C15.7949 13.9695 15.9357 14.0043 16.0604 14.0723L18.1107 15.2149C18.2181 15.2728 18.3074 15.3578 18.3694 15.4609C18.4313 15.564 18.4634 15.6814 18.4624 15.8008C18.4598 16.5235 18.1638 17.2161 17.6388 17.728C17.1138 18.24 16.4021 18.53 15.6584 18.5352V18.5352Z"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+        <a class="contacts__mail" href="mailto:info130700@yandex.ru">
+          <b>e-mail:</b> <span>info130700@yandex.ru</span>
+        </a>
+      </div>
+      <div>
+        <a class="contacts__site" href="TUR-DIVEEVO.RU" target="_blank">
+          <b>Сайт:</b> <span>TUR-DIVEEVO.RU</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="request">
+  <div class="container">
+    <div class="request__wrapper">
+      <div class="request__top">
+        <h2 class="request__title section-title">Обратная связь</h2>
+        <p class="request__text">
+          Заполните форму ниже, и наш менеджер свяжется с вами в течении 10 мин
+        </p>
+      </div>
+      <form class="request__form form-submit">
+        <div class="form-submit__inner">
+          <div class="form-submit__group">
+            <label class="form-submit__label"> ФИО </label>
+            <input class="form-submit__input" type="text" placeholder="ФИО" />
+          </div>
+          <div class="form-submit__group">
+            <label class="form-submit__label"> Телефон </label>
+            <input
+              class="form-submit__input"
+              type="tel"
+              placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"
+            />
+          </div>
+          <div class="form-submit__group">
+            <label class="form-submit__label"> E-mail </label>
+            <input
+              class="form-submit__input"
+              type="email"
+              placeholder="Адрес вашей электронной почты"
+            />
+          </div>
+        </div>
+        <button class="form-submit__btn btn" type="button">Отправить</button>
+        <div class="form-submit__bottom">
+          Нажимая кнопку “Отправить” вы соглашаетесь <br> с
+          <a href="#">полиитикой конфиденциальности</a>
+        </div>
+      </form>
+    </div>
+  </div>
 </section>
 
       </main>
@@ -2206,11 +2732,3 @@
 
   </body>
 </html>
-
-<!-- <label class="checkbox">
-  <input class="checkbox__input" type="checkbox" required />
-  <span class="checkbox__box"></span>
-  <span class="checkbox__text">
-    Соглашаюсь с<a href="#"> обработкой персональных данных</a>
-  </span> 
-</label> -->
