@@ -3,6 +3,27 @@ window.addEventListener('DOMContentLoaded', () => {
   //   $('input[type="tel"]').mask('+7 (999) 999-99-99');
   //   // * ===== Nice Select
   //   // $('select').niceSelect();
+
+  (function showMore() {
+    // Сделаю позже через slice
+    const rows = document.querySelectorAll('.schedule__row.hidden');
+    const btn = document.querySelector('.schedule__btn');
+
+    if (btn) {
+      btn.addEventListener('click', (e) => {
+        rows.forEach((row) => {
+          row.classList.toggle('hidden');
+
+          if (row.classList.contains('hidden')) {
+            btn.textContent = 'Посмотреть весь список';
+          } else {
+            btn.textContent = 'Скорыть';
+          }
+        });
+      });
+    }
+  })();
+
   // * ===== Slider
   (function slider() {
     const sliderEl = document.querySelector('.excursions__slider');
