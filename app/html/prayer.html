@@ -11,11 +11,13 @@
     <div class="site-wrapper">
       @include('./components/_header.html')
 
-      <main class="main">@include('./components/_prayer.html')</main>
+      <main class="main">
+        @include('./components/_prayer.html')
+        @include('./components/_prayer-schedule.html')
+      </main>
       @include('./components/_footer.html')
     </div>
 
     @include('./components/base/_scripts.html')
   </body>
 </html>
-
