@@ -4540,6 +4540,11 @@ body.no-scroll {
           align-items: center;
   margin: 0 auto;
 }
+.text-card__back.popup__close {
+  position: relative;
+  width: auto;
+  height: auto;
+}
 .text-card__back svg {
   margin-right: 10px;
 }
