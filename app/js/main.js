@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
   //   // * ===== Nice Select
   //   // $('select').niceSelect();
 
+  // * Show More
   (function showMore() {
     // Сделаю позже через slice
     const rows = document.querySelectorAll('.schedule__row.hidden');
@@ -64,6 +65,54 @@ window.addEventListener('DOMContentLoaded', () => {
       breakpoints: {
         315: {
           spaceBetween: 20,
+        },
+        769: {
+          spaceBetween: 30,
+        },
+      },
+    });
+  })();
+
+  // * ===== Slider
+  (function slider() {
+    const sliderEl = document.querySelector('.reviews__slider');
+    new Swiper(sliderEl, {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.reviews__content .swiper-button-next',
+        prevEl: '.reviews__content .swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      breakpoints: {
+        315: {
+          spaceBetween: 15,
+        },
+        769: {
+          spaceBetween: 30,
+        },
+      },
+    });
+  })();
+
+  // * ===== Slider
+  (function slider() {
+    const sliderEl = document.querySelector('.stock__slider');
+    new Swiper(sliderEl, {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.stock__content .swiper-button-next',
+        prevEl: '.stock__content .swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      breakpoints: {
+        315: {
+          spaceBetween: 15,
         },
         769: {
           spaceBetween: 30,
@@ -179,22 +228,6 @@ window.addEventListener('DOMContentLoaded', () => {
   };
   toggleAccordion('.accordion-control', '.accordion-content', '.accordion');
 
-  //   // * ===== Slider
-  //   (function slider() {
-  //     const sliderEl = document.querySelector('.price-list-top__slider');
-  //     new Swiper(sliderEl, {
-  //       slidesPerView: 'auto',
-  //       centeredSlides: true,
-  //       slideToClickedSlide: true,
-  //       initialSlide: 4,
-  //       spaceBetween: 20,
-  //       navigation: {
-  //         nextEl: '.price-list-top__slider .swiper-button-next',
-  //         prevEl: '.price-list-top__slider .swiper-button-prev',
-  //       },
-  //     });
-  //   })();
-
   // * ===== Fixed Header
   (function fixedHeader() {
     function scrollHeader() {
@@ -276,63 +309,51 @@ window.addEventListener('DOMContentLoaded', () => {
     bindModal('.text-btn', '.popup--text', '.popup__close');
   })();
 
-  // * ==== Single Product
+  // * ===== Slider Thumbs
   (function verticalSlider() {
-    let mySwiperNav = new Swiper('#slider-nav', {
-      slidesPerView: 'auto',
-      spaceBetween: 17,
-      direction: 'horizontal',
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-    });
+    const sliderWrap = document.querySelectorAll('.slider-thumbs');
+    sliderWrap.forEach((el) => {
+      if (el) {
+        const sliderNav = el.querySelector('.slider-thumbs__nav-wrap');
+        const sliderMain = el.querySelector('.slider-thumbs__main');
 
-    let mySwiper = new Swiper('#slider-main', {
-      spaceBetween: 10,
-      loopedSlides: 4,
-      thumbs: {
-        swiper: mySwiperNav,
-      },
+        console.log(sliderNav);
+
+        let mySwiperNav = new Swiper(sliderNav, {
+          slidesPerView: 'auto',
+          spaceBetween: 17,
+          direction: 'horizontal',
+          watchSlidesVisibility: true,
+          watchSlidesProgress: true,
+        });
+
+        new Swiper(sliderMain, {
+          spaceBetween: 10,
+          loopedSlides: 4,
+          thumbs: {
+            swiper: mySwiperNav,
+          },
+        });
+      }
     });
   })();
 
-  //   // * ===== Toggle Tabs
-  //   function someTabs(headerSelector, tabSelector, contentSelector, activeClass) {
-  //     const header = document.querySelectorAll(headerSelector);
-  //     const tab = document.querySelectorAll(tabSelector);
-  //     const content = document.querySelectorAll(contentSelector);
-  //     header.forEach((el) => {
-  //       if (el) {
-  //         hideTabContent();
-  //         showTabContent();
-  //         function hideTabContent() {
-  //           content.forEach((item) => {
-  //             item.classList.remove('active');
-  //           });
-  //           tab.forEach((item) => {
-  //             item.classList.remove(activeClass);
-  //           });
-  //         }
-  //         function showTabContent(i = 0) {
-  //           content[i].classList.add('active');
-  //           tab[i].classList.add(activeClass);
-  //         }
-  //         header.forEach((item) => {
-  //           if (item) {
-  //             item.addEventListener('click', (e) => {
-  //               const target = e.target;
-  //               if (target.classList.contains(tabSelector.replace(/\./, ''))) {
-  //                 tab.forEach((item, i) => {
-  //                   if (target == item || target.parentNode == item) {
-  //                     hideTabContent();
-  //                     showTabContent(i);
-  //                   }
-  //                 });
-  //               }
-  //             });
-  //           }
-  //         });
-  //       }
-  //     });
-  //   }
-  //   someTabs('.contacts', '.contacts-top__item', '.contacts__content', 'active');
+  // * ==== Single Product
+  // (function verticalSlider() {
+  //   let mySwiperNav = new Swiper('#slider-nav', {
+  //     slidesPerView: 'auto',
+  //     spaceBetween: 17,
+  //     direction: 'horizontal',
+  //     watchSlidesVisibility: true,
+  //     watchSlidesProgress: true,
+  //   });
+
+  //   let mySwiper = new Swiper('#slider-main', {
+  //     spaceBetween: 10,
+  //     loopedSlides: 4,
+  //     thumbs: {
+  //       swiper: mySwiperNav,
+  //     },
+  //   });
+  // })();
 });

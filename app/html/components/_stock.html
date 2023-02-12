@@ -1,38 +1,81 @@
 <section class="stock">
-  <div class="container">
+  <div class="container container--big">
     <h2 class="stock__title section-title">
       Акции и специальные предложения по экскурсиям в Дивеево
     </h2>
 
-    <ul class="stock__list">
-      <li class="stock-item">
-        <div class="stock-item__img">
-          <picture>
-            <source srcset="img/stock/1.webp" type="image/webp" />
-            <img src="img/stock/1.png" alt="" />
-          </picture>
-        </div>
-        <div class="stock-item__offer">
-          <span class="stock-item__name">Специальное предложение</span>
-          <h3 class="stock-item__title">Дивеево Муром</h3>
-        </div>
-      </li>
-      <li class="stock-item">
-        <div class="stock-item__img">
-          <picture>
-            <source srcset="img/stock/1.webp" type="image/webp" />
-            <img src="img/stock/1.png" alt="" />
-          </picture>
-        </div>
-        <div class="stock-item__offer">
-          <span class="stock-item__name">
-            Скидка на групповой тур <br />
-            от 4х человек
-          </span>
-          <h3 class="stock-item__title">Дивеево Муром</h3>
-        </div>
-      </li>
-    </ul>
+    <div class="stock__content">
+      <div class="stock__slider swiper">
+        <ul class="stock__slides swiper-wrapper">
+          <li class="stock-item swiper-slide">
+            <div class="stock-item__img">
+              <picture>
+                <source srcset="img/stock/1.webp" type="image/webp" />
+                <img src="img/stock/1.png" alt="" />
+              </picture>
+            </div>
+            <div class="stock-item__offer">
+              <span class="stock-item__name">Специальное предложение</span>
+              <h3 class="stock-item__title">Дивеево Муром</h3>
+            </div>
+          </li>
+          <li class="stock-item swiper-slide">
+            <div class="stock-item__img">
+              <picture>
+                <source srcset="img/stock/1.webp" type="image/webp" />
+                <img src="img/stock/1.png" alt="" />
+              </picture>
+            </div>
+            <div class="stock-item__offer">
+              <span class="stock-item__name">
+                Скидка на групповой тур <br />
+                от 4х человек
+              </span>
+              <h3 class="stock-item__title">Дивеево Муром</h3>
+            </div>
+          </li>
+          <li class="stock-item swiper-slide">
+            <div class="stock-item__img">
+              <picture>
+                <source srcset="img/stock/1.webp" type="image/webp" />
+                <img src="img/stock/1.png" alt="" />
+              </picture>
+            </div>
+            <div class="stock-item__offer">
+              <span class="stock-item__name">Специальное предложение</span>
+              <h3 class="stock-item__title">Дивеево Муром</h3>
+            </div>
+          </li>
+          <li class="stock-item swiper-slide">
+            <div class="stock-item__img">
+              <picture>
+                <source srcset="img/stock/1.webp" type="image/webp" />
+                <img src="img/stock/1.png" alt="" />
+              </picture>
+            </div>
+            <div class="stock-item__offer">
+              <span class="stock-item__name">
+                Скидка на групповой тур <br />
+                от 4х человек
+              </span>
+              <h3 class="stock-item__title">Дивеево Муром</h3>
+            </div>
+          </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <button
+        class="swiper-button-next"
+        type="button"
+        aria-label="Следующий"
+      ></button>
+      <button
+        class="swiper-button-prev"
+        type="button"
+        aria-label="Предыдущий"
+      ></button>
+    </div>
 
     <div class="stock__bottom">
       <button class="stock__btn btn" type="button">Все акции</button>
